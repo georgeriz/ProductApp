@@ -1,0 +1,1 @@
+RUN "python setup.py py2exe" in a command window.
