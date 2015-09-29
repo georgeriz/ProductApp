@@ -56,6 +56,13 @@ def search_by_code(code):
     result_list = []
     my_list = _all_product_list
     code = code.strip()
+    #Codes are in the form: 123,456,7890
+    code = code.replace(".", ",")
+    code = code.replace(" ", ",")
+    if len(code) > 3 and code[3] != ",":
+        code = code[:3] + "," + code[3:]
+    if len(code) > 7 and code[7] != ",":
+        code = code[:7] + "," + code[7:]
     for product in my_list:
         if product.get_code().startswith(code):
             result_list.append(product)

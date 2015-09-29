@@ -2,7 +2,7 @@
 
 class WordChange:
     """transform, add, delete are supported
-    entries stored at "data_files/word_change.txt"
+    entries stored at "data_files/word_change.db"
     all entries must be in lower case"""
     def __init__(self):
         self.word_change = {}
