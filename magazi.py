@@ -272,6 +272,26 @@ def clean_details(event=None):
 def open_wordchange_window(event=None):
     WordChangeWindow()
 
+def toggle_largefont(event=None):
+    global _large_font
+    _large_font = not _large_font
+    change_font(root)
+    if _large_font:
+        root.option_add("*font", "times 15")
+    else:
+        root.option_add("*font", "TkDefaultFont")
+
+def change_font(widget):
+    try:
+        if _large_font:
+            widget["font"] = "times 15"
+        else:
+            widget["font"] = "TkDefaultFont"
+    except:
+        pass
+    for kid in widget.winfo_children():
+        change_font(kid)
+
 def toggle_expertmode(event=None):
     global _expert_mode
     _expert_mode = not _expert_mode
@@ -309,6 +329,7 @@ with open(data_start) as f:
         _file_info.append(line.decode('utf-8-sig').strip())
 _all_product_list = pool(data_file, _file_info)
 _expert_mode = False
+_large_font = False
 
 # style
 style = Style()
@@ -328,6 +349,8 @@ file_menu.add_command(label=TAGS["exit_command"], command=root.destroy)
 view_menu = Menu(menu_bar, tearoff=0)
 view_menu.add_command(label=TAGS["name_view_command"], command=to_name_tab)
 view_menu.add_command(label=TAGS["code_view_command"], command=to_code_tab)
+view_menu.add_separator()
+view_menu.add_checkbutton(label=TAGS["font_view_command"], command=toggle_largefont)
 view_menu.add_separator()
 view_menu.add_checkbutton(label=TAGS["expert_command"], command=toggle_expertmode)
 

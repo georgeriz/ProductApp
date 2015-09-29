@@ -11,6 +11,7 @@ TAGS["import_error_message"] = ["problem loading. import new one", "Το συγ�
 TAGS["view_menu"] = ["View", "Προβολή"]
 TAGS["name_view_command"] = ["Search by name", "Αναζήτηση ονόματος"]
 TAGS["code_view_command"] = ["Search by code", "Αναζήτηση κωδικού"]
+TAGS["font_view_command"] = ["Large font", "Μεγάλη Γραμματοσειρά"]
 TAGS["expert_command"] = ["Toggle expert mode", "Εμφάνιση λεπτομερειών"]
 
 TAGS["edit_menu"] = ["Edit", "Επεξεργασία"]
