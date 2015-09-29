@@ -43,7 +43,9 @@ def _search_term(term, my_list):
         try:
             product_names = product.get_name().split()
             for product_name_term in product_names:
-                if product_name_term.lower().startswith(term.lower()):
+                term = term.lower().strip("(").strip(")")
+                product_name_term = product_name_term.lower().strip("(").strip(")")
+                if product_name_term.startswith(term):
                     res.append(product)
                     break
         except:
