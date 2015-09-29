@@ -22,19 +22,19 @@ class Product:
     def get_price(self):
         if self.price == "":
             return "0.00"
-        return '{0:.2f}'.format(self.price)
+        return '{0:,.2f}'.format(self.price)
     def get_price_no_vat(self):
         if self.price_no_vat == "":
             return "0.00"
-        return '{0:.2f}'.format(self.price_no_vat)
+        return '{0:,.2f}'.format(self.price_no_vat)
     def get_cost(self):
         if self.cost == "":
             return "0.00"
-        return '{0:.2f}'.format(self.cost)
+        return '{0:,.2f}'.format(self.cost)
     def get_gain(self):
         if self.gain == "":
             return "0.00"
-        return '{0:.2f}'.format(self.gain)
+        return '{0:,.2f}'.format(self.gain)
     def get_gain_percentage(self):
         if self.gain_percentage == "":
             return "-"
