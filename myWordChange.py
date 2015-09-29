@@ -8,12 +8,19 @@ class WordChange:
         self.word_change = {}
         connection = sqlite3.connect("data_files/word_change.db")
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM synonyms")
-        for row in cursor.fetchall():
-            self.word_change[row[0]] = row[1]
+        try:
+            cursor.execute("SELECT * FROM synonyms")
+            for row in cursor.fetchall():
+                self.word_change[row[0]] = row[1]
+        except sqlite3.OperationalError:
+            cursor.execute("CREATE TABLE synonyms (general TEXT, specific TEXT)")
+            connection.commit()
         connection.close()
 
     def _find(self, a):
+        """internal help function that
+        scans the internal synonyms dictionary to
+        find the correct synonym"""
         if a in self.word_change:
             return self.word_change[a]
         return None
