@@ -17,3 +17,6 @@ and return those information.
 The excel document is provided by the user and all the necessary information
 should be in a continuous table in a specific sheet. 
 
+Since the excel document is read every time ProductApp is started, if any
+changes are made to the excel, a simple restart of ProductApp gives always
+updated info.
