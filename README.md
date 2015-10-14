@@ -21,7 +21,7 @@ Since the excel document is read every time ProductApp is started, if any
 changes are made to the excel, a simple restart of ProductApp gives always
 updated info.
 
--Folders structure
+-Folder's structure
 Apart from the executable (.exe) a folder named "data_files" is necessary
 to exist in the same directory. This folder contains an icon (bolt.ico), a help text
 file (help.txt), a text file with the name of excel file (data_location.txt),
