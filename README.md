@@ -20,3 +20,7 @@ should be in a continuous table in a specific sheet.
 Since the excel document is read every time ProductApp is started, if any
 changes are made to the excel, a simple restart of ProductApp gives always
 updated info.
+
+-Folders structure
+Apart from the executable (.exe) a folder named "data_files" is necessary
+to exist in the same directory.
