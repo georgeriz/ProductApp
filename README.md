@@ -23,4 +23,9 @@ updated info.
 
 -Folders structure
 Apart from the executable (.exe) a folder named "data_files" is necessary
-to exist in the same directory.
+to exist in the same directory. This folder contains an icon (bolt.ico), a help text
+file (help.txt), a text file with the name of excel file (data_location.txt),
+a text file with the position of the data in the excel file (data_start.txt) and
+a database file (word_change.db) with added synonyms for the search functionality.
+Apart from the database file, all the other files are necessary in order for
+the application to start.
