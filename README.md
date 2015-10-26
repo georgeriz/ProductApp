@@ -8,7 +8,7 @@ and includes the capability of searching by alliases.
 Results list includes basic information about the matching products,
 as well as extended information if a product is selected.
 
--Excel document requirements
+-Excel document requirements:
 The excel document contains various products along with their respective 
 codes, cost, price and other information.
 ProductApp searches the excel document based on a product's name or code
@@ -21,7 +21,7 @@ Since the excel document is read every time ProductApp is started, if any
 changes are made to the excel, a simple restart of ProductApp gives always
 updated info.
 
--Folder's structure
+-Folder's structure:
 Apart from the executable (.exe) a folder named "data_files" is necessary
 to exist in the same directory. This folder contains an icon (bolt.ico), a help text
 file (help.txt), a text file with the name of excel file (data_location.txt),
