@@ -6,7 +6,7 @@ TAGS["file_menu"] = ["File", "Αρχείο"]
 TAGS["import_command"] = ["Import excel file", "Εισαγωγή αρχείου excel"]
 TAGS["exit_command"] = ["Exit", "Έξοδος"]
 TAGS["import_error_title"] = ["Error loading", "Πρόβλημα φόρτωσης"]
-TAGS["import_error_message"] = ["problem loading. import new one", "Το συγκεκριμένο αρχείο είναι ακατάλληλο. Επιλέξτε κάποιο άλλο"]
+TAGS["import_error_message"] = ["Problem loading. Import new file.", "Το συγκεκριμένο αρχείο είναι ακατάλληλο. Επιλέξτε κάποιο άλλο."]
 
 TAGS["view_menu"] = ["View", "Προβολή"]
 TAGS["name_view_command"] = ["Search by name", "Αναζήτηση ονόματος"]
@@ -34,7 +34,8 @@ TAGS["title_cost"] = ["COST:", "ΚΟΣΤΟΣ:"]
 TAGS["title_gain"] = ["GAIN:", "ΚΕΡΔΟΣ:"]
 TAGS["title_gain_percentage"] = ["GAIN PERCENTAGE:", "ΠΟΣΟΣΤΟ ΚΕΡΔΟΥΣ:"]
 
-TAGS["result_no_match"] = ["No match found...", "Κανένα αποτέλεσμα"]
+TAGS["result_no_match"] = ["No match found...", "Κανένα αποτέλεσμα..."]
+TAGS["result_no_match_incorrect_input"] = ["LOAD NEW FILE", "ΕΠΙΛΕΞΤΕ ΔΙΑΦΟΡΕΤΙΚΟ ΑΡΧΕΙΟ"]
 
 TAGS["clear_button"] = ["Clear", "Καθαρισμός"]
 

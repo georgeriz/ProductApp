@@ -7,9 +7,11 @@ from os import startfile
 from myProduct import *
 from myWordChange import *
 from myTags import TAGS as labels
+#0 for english
+#1 for greek
 TAGS = {}
 for key in labels:
-    TAGS[key] = labels[key][0]
+    TAGS[key] = labels[key][1]
 
 app_icon = "data_files/bolt.ico"
 data_location = "data_files/data_location.txt"
@@ -18,11 +20,14 @@ help_file_location = "data_files\help.txt"
 
 # helper functions
 def pool(filename, info):
+    global _incorrect_file_format
     my_list = []
     try:
         reader = ExcelReader(filename, info)
         my_list = reader.run()
+        _incorrect_file_format = False
     except:
+        _incorrect_file_format = True
         tkMessageBox.showinfo(TAGS["import_error_title"], TAGS["import_error_message"])
     return my_list
 
@@ -87,7 +92,10 @@ def _insert_result(result):
 
 def _result_handling(result_list):
     if len(result_list) == 0:
-        Label(disposable_frame, text = TAGS["result_no_match"]).pack(fill = X)
+        if _incorrect_file_format:
+            Label(disposable_frame, text = TAGS["result_no_match_incorrect_input"], style = "Message.TLabel").pack(fill = X)
+        else:
+            Label(disposable_frame, text = TAGS["result_no_match"]).pack(fill = X)
     else:
         for result in result_list:
             _insert_result(result)
